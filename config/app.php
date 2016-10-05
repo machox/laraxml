@@ -38,7 +38,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -177,8 +177,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        // XML document parser https://github.com/orchestral/parser
-        Orchestra\Parser\XmlServiceProvider::class,
+        App\Providers\CustomAuthProvider::class,
     ],
 
     /*
@@ -226,7 +225,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'XmlParser' => Orchestra\Parser\Xml\Facade::class,
 
     ],
 

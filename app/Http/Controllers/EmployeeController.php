@@ -3,15 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
-
-use XmlParser;
-
 use Storage;
+use \App\Employee;
 
 class EmployeeController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -19,14 +26,13 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $data = Storage::disk('data')->url('data.xml');
-        $xml = XmlParser::load($data);
-        //print_r($data);die;
-        $user = $xml->parse([
-        'id' => ['uses' => 'row.id'],
-        'name' => ['uses' => 'row.name']
-        ]);
-        print_r($user);
+        $foods = Employee::all()->toArray();
+
+        //print_r($foods);
+
+        $food = Employee::select()->where('id', '=', '1')->get();
+        $x = $food->xml[0];
+        print_r($foods);
     }
 
     /**

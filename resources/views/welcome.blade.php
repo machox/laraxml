@@ -48,6 +48,13 @@
             .title {
                 font-size: 84px;
             }
+            .title-child {
+                font-size: 30px;
+                font-weight: normal;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
 
             .links > a {
                 color: #636b6f;
@@ -74,16 +81,17 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="title">
+                    Welcome
                 </div>
-
+                 <div class="title-child m-b-md">
+                    Created By Bayu Prahasto
+                 </div>
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="mailto:bayoe13@gmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/bayuprahasto">LinkedIn</a>
+                    <a href="http://maccox.com/">Website</a>
+                    <a href="https://github.com/machox">GitHub</a>
                 </div>
             </div>
         </div>
