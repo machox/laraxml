@@ -5,36 +5,59 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
 
-            <ul  class="nav nav-pills">
-                <li class="active"><a  href="#city" data-toggle="tab">By City</a></li>
-                <li><a href="#department" data-toggle="tab">By Department</a></li>
+        <!-- BEGIN Portlet PORTLET-->
+        <div class="portlet">
+          <div class="portlet-title">
+            <div class="caption caption-red">
+              <i class="glyphicon glyphicon-user"></i>
+              <span class="caption-subject bold font-yellow-crusta uppercase">
+              PEOPLE </span>
+            </div>
+            <ul class="nav nav-tabs">
+              <li class="active">
+                <a href="#bycity" data-toggle="tab">
+                By City </a>
+              </li>
+              <li>
+                <a href="#bydepartment" data-toggle="tab">
+                By Department </a>
+              </li>
             </ul>
-
-            <div class="tab-content clearfix">
-                <div class="tab-pane active" id="city">
-                    <table id="myTable1" class="table table-striped table-bordered display" cellspacing="0" width="100%">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>City</th>
-                                <th>Department</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                    </table>
+          </div>
+          <div class="portlet-body">
+            <div class="tab-content">
+              <div class="tab-pane" id="bydepartment">
+                <div class="table-responsive">
+                  <table id="myTable2" class="table table-hover table-striped display" cellspacing="0" width="100%">
+                      <thead>
+                          <tr>
+                              <th>Name</th>
+                              <th>City</th>
+                              <th>Department</th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                  </table>
                 </div>
-                <div class="tab-pane" id="department">
-                    <table id="myTable2" class="table table-striped table-bordered display" cellspacing="0" width="100%">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>City</th>
-                                <th>Department</th>
-                                <th></th>
-                        </thead>
+              </div>
+              <div class="tab-pane active" id="bycity">
+                <div class="table-responsive">
+                    <table id="myTable1" class="table table-hover table-striped display" cellspacing="0" width="100%">
+                          <thead>
+                              <tr>
+                                  <th>Name</th>
+                                  <th>City</th>
+                                  <th>Department</th>
+                                  <th></th>
+                              </tr>
+                          </thead>
                     </table>
+                  </div>
                 </div>
             </div>
+          </div>
+        </div>
+        <!-- END Portlet PORTLET-->
         </div>
     </div>
 </div>

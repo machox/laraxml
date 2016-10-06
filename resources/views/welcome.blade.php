@@ -88,10 +88,10 @@
                     Created By Bayu Prahasto
                  </div>
                 <div class="links">
-                    <a href="mailto:bayoe13@gmail.com">Email</a>
-                    <a href="https://www.linkedin.com/in/bayuprahasto">LinkedIn</a>
-                    <a href="http://maccox.com/">Website</a>
-                    <a href="https://github.com/machox">GitHub</a>
+                    <a href="mailto:bayoe13@gmail.com" target="_blank">Email</a>
+                    <a href="https://www.linkedin.com/in/bayuprahasto" target="_blank">LinkedIn</a>
+                    <a href="http://maccox.com/" target="_blank">Website</a>
+                    <a href="https://github.com/machox" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>

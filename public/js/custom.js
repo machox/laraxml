@@ -19,7 +19,7 @@ $(document).ready(function() {
                 columnDefs: [
                     { 
                         "render": function ( data, type, row ) {
-                            return '<a href="#" class="btn btn-link name-link">'+data+'</a>';
+                            return '<a href="#" class="btn btn-link name-link">'+data+'</a><br><span class="caption-helper" style="padding: 0px 12px;">'+row.position+'</span>';
                         },
                         "className": "name-cell",
                         "orderable": false, 
@@ -55,14 +55,14 @@ $(document).ready(function() {
                     api.column(1, {page:'current'} ).data().each( function ( group, i ) {
                         if ( last !== group ) {
                             $(rows).eq( i ).before(
-                                '<tr class="group"><td colspan="4">'+group+'</td></tr>'
+                                '<tr class="group"><td colspan="4"><strong>'+group+'</strong></td></tr>'
                             );
          
                             last = group;
                         }
                     } );
                 },
-                paging: false
+                paging: true
             });
 
             // Order by the grouping
@@ -94,7 +94,7 @@ $(document).ready(function() {
                 columnDefs: [
                     { 
                         "render": function ( data, type, row ) {
-                            return '<a href="#" class="btn btn-link name-link">'+data+'</a>';
+                            return '<a href="#" class="btn btn-link name-link">'+data+'</a><br><span class="caption-helper" style="padding: 0px 12px;">'+row.position+'</span>';
                         },
                         "className": "name-cell",
                         "orderable": false, 
@@ -130,14 +130,14 @@ $(document).ready(function() {
                     api.column(2, {page:'current'} ).data().each( function ( group, i ) {
                         if ( last !== group ) {
                             $(rows).eq( i ).before(
-                                '<tr class="group"><td colspan="4">'+group+'</td></tr>'
+                                '<tr class="group"><td colspan="4"><strong>'+group+'</strong></td></tr>'
                             );
          
                             last = group;
                         }
                     } );
                 },
-                paging: false
+                paging: true
             });
 
             // Order by the grouping
@@ -208,6 +208,7 @@ $(document).ready(function() {
       $statusModal
         .find('#statusId').val(data.status).end()
         .find('#HiddenId').val(data.id).end()
+        .find('#message-info').hide().end()
         .modal('show');
     };
 

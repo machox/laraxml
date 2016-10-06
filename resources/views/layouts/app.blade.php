@@ -13,6 +13,8 @@
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/datatables.min.css" rel="stylesheet">
+    <link href="/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="/css/responsive.bootstrap.min.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -81,10 +83,22 @@
     </nav>
 
     @yield('content')
-
+    <div class="row">
+        <hr>
+        <div class="col-lg-12">
+            <div class="col-md-8">
+                <a href="mailto:bayoe13@gmail.com" target="_blank">Email</a> | <a href="https://www.linkedin.com/in/bayuprahasto" target="_blank">LinkedIn</a> | <a href="http://maccox.com/" target="_blank">Website</a> | <a href="https://github.com/machox" target="_blank">GitHub</a>   
+            </div>
+            <div class="col-md-4">
+                <p class="muted pull-right">© 2016 Bayu Prahasto. All rights reserved</p>
+            </div>
+        </div>
+    </div>
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <script src="/js/datatables.min.js"></script>
+    <script src="/js/dataTables.bootstrap.min.js"></script>
+    <script src="/js/responsive.bootstrap.min.js"></script>
     <script src="/js/custom.js"></script>
 </body>
 </html>
