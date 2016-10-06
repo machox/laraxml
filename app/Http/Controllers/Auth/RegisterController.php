@@ -87,8 +87,15 @@ class RegisterController extends Controller
      */
     public function register(Request $request)
     {
-        $this->validator($request->all())->validate();
-
+        $validator = $this->validator($request->all());
+        $validator->validate();
+        $qry = User::select()->where('email','=', $request->email)->first();
+        if(!$qry->isEmpty()) {
+            $validator->errors()->add('email', 'This email already exist');
+            return redirect('/register')
+                    ->withErrors($validator)
+                    ->withInput();
+        }
         event(new Registered($user = $this->create($request->all())));
 
         return redirect('/login');

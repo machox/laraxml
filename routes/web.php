@@ -18,5 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-
-Route::resource('employees', 'EmployeeController');
+Route::get('/home/getemployees', 'HomeController@getData');
+Route::post('/home/changestatus', 'HomeController@changeStatus');

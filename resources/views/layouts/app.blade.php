@@ -19,6 +19,8 @@
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
         ]); ?>
+
+        var APP_URL = {!! json_encode(url('/')) !!};
     </script>
 </head>
 <body>
@@ -35,8 +37,8 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand" href="{{ url('/home') }}">
+                    {{ config('app.name', 'Employi') }}
                 </a>
             </div>
 
